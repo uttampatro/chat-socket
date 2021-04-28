@@ -26,7 +26,6 @@ io.on("connection", (socket) => {
 
   socket.on("disconnect", (data) => {
     console.log("User disconnected");
-    io.to(data.room).emit('message', { userName: 'Admin', text: `${data.content} has left.` });
   });
 });
 
